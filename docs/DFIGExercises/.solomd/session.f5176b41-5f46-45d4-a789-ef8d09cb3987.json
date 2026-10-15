@@ -1,7 +1,7 @@
 {
   "device_id": "f5176b41-5f46-45d4-a789-ef8d09cb3987",
   "device_label": "Windows",
-  "saved_at": 1792058006,
+  "saved_at": 1792059395,
   "active_index": 3,
   "tabs": [
     {
@@ -28,9 +28,23 @@
     {
       "file_path": "C:\\Users\\ccsoa\\OneDrive\\Documentos\\Tutoriales\\English\\docs\\DFIGExercises\\CPArranqueconvientosbajos.md",
       "file_name": "CPArranqueconvientosbajos.md",
+      "cursor_line": 12,
+      "cursor_col": 97,
+      "rel_path": "CPArranqueconvientosbajos.md"
+    },
+    {
+      "file_path": "C:\\Users\\ccsoa\\OneDrive\\Documentos\\Tutoriales\\English\\docs\\DFIGExercises\\CPArranqueientSupNominal.md",
+      "file_name": "CPArranqueientSupNominal.md",
       "cursor_line": null,
       "cursor_col": null,
-      "rel_path": "CPArranqueconvientosbajos.md"
+      "rel_path": "CPArranqueientSupNominal.md"
+    },
+    {
+      "file_path": "C:\\Users\\ccsoa\\OneDrive\\Documentos\\Tutoriales\\English\\docs\\DFIGExercises\\CPArranqueVientoEntreSincyNomina.md",
+      "file_name": "CPArranqueVientoEntreSincyNomina.md",
+      "cursor_line": null,
+      "cursor_col": null,
+      "rel_path": "CPArranqueVientoEntreSincyNomina.md"
     }
   ]
 }

@@ -6,9 +6,9 @@ tags:
 # Wind turbine start-up (cutin) with wind below the nominal
 
 !!! tip "🎯 Start-up with wind below the Nominal"
-***Section objective:*** Explore DFIG behavior during start-up (cutin) when wind is below the nominal (~11 m/s).
 
-***What to observe:*** The operational curve (Power vs RPMs panel), the evolution toward the MPPT point, and how behavior differs depending on whether the wind is above or below the synchronism wind speed (~7.8 m/s).
+    ***Section objective:*** Explore DFIG behavior during start-up (cutin) when wind is below the nominal (~11 m/s).
+    ***What to observe:*** The operational curve (Power vs RPMs panel), the evolution toward the MPPT point, and how behavior differs depending on whether the wind is above or below the synchronism wind speed (~7.8 m/s).
     💡 Notice whether the stable operating point remains on the Maximum Power curve (blue line).
 
 In this series of experiments, we will explore DFIG behavior when the wind is below nominal.
