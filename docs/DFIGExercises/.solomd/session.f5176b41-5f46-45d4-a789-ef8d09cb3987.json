@@ -1,8 +1,8 @@
 {
   "device_id": "f5176b41-5f46-45d4-a789-ef8d09cb3987",
   "device_label": "Windows",
-  "saved_at": 1791968859,
-  "active_index": 1,
+  "saved_at": 1792058006,
+  "active_index": 3,
   "tabs": [
     {
       "file_path": null,
@@ -14,9 +14,23 @@
     {
       "file_path": "C:\\Users\\ccsoa\\OneDrive\\Documentos\\Tutoriales\\English\\docs\\DFIGExercises\\Clasesprcticas.md",
       "file_name": "Clasesprcticas.md",
+      "cursor_line": 63,
+      "cursor_col": 124,
+      "rel_path": "Clasesprcticas.md"
+    },
+    {
+      "file_path": "C:\\Users\\ccsoa\\OneDrive\\Documentos\\Tutoriales\\English\\docs\\DFIGExercises\\comprobacion_imagenes_no_usadas.txt",
+      "file_name": "comprobacion_imagenes_no_usadas.txt",
       "cursor_line": null,
       "cursor_col": null,
-      "rel_path": "Clasesprcticas.md"
+      "rel_path": "comprobacion_imagenes_no_usadas.txt"
+    },
+    {
+      "file_path": "C:\\Users\\ccsoa\\OneDrive\\Documentos\\Tutoriales\\English\\docs\\DFIGExercises\\CPArranqueconvientosbajos.md",
+      "file_name": "CPArranqueconvientosbajos.md",
+      "cursor_line": null,
+      "cursor_col": null,
+      "rel_path": "CPArranqueconvientosbajos.md"
     }
   ]
 }
