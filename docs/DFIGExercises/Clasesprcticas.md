@@ -60,42 +60,42 @@ tags:
 
 ## Introduction
 
-In this section the description of a set of experiments that will help you understand the complex behavior of this type of wind turbines is presented.
+This section describes a set of experiments that will help you understand the complex behavior of this type of wind turbine.
 
-Other experiments allow observing the evolution of certain signals when there are fault conditions.
+Other experiments allow you to observe the evolution of certain signals under fault conditions.
 
 ## Prerequisites
 
-To carry out the experiments described in this section it is essential to become familiar with the description of the components of this Simulator (see [Description of the DFIG Wind Turbine Simulator](../DFIGTutorial/DescripcindelSimuladordelAerogen.md)) and of the common functionalities of the LdP framework ([LdP Tutorial](../LdP_Help/Introduccion.md)).
+To carry out the experiments described in this section, it is essential to become familiar with the description of the components of this Simulator (see [Description of the DFIG Wind Turbine Simulator](../DFIGTutorial/DescripcindelSimuladordelAerogen.md)) and of the common functionalities of the LdP framework ([LdP Tutorial](../LdP_Help/Introduccion.md)).
 
 It is also convenient to know the description of the different [Predefined panels](../DFIGTutorial/PanelespredefinidosparalosRegist.md) for this simulator.
 
-It is also necessary to know the *StripRecorders* (*Recorders*) defined in this Simulator. To do so, go to the execution control form ("*Executing ..*")
+You also need to know the *StripRecorders* (*Recorders*) defined in this Simulator. To do so, go to the execution control form ("*Executing ..*")
 
 ![](<lib/Formulario control ejecucion.jpg>)
 
-and press the "*Synoptics*" menu option: and you will get the list of synoptics presented in the following figure:
+and press the "*Synoptics*" menu option, and you will get the list of synoptics presented in the following figure:
 
 ![](<lib/Listado registradores.jpg>)
 
-Click on "*StripRecorders*" and you will see that a form with the label "Registradores_X" is presented.
+Click "StripRecorders" to see a form labeled "Registradores_X".
 
 ![](<lib/Registradores_X.jpg>)
 
-Clicking on "Predefined panels" you will get a list of predefined configurations for this simulator.
+Clicking "Predefined panels" shows a list of predefined configurations for this simulator.
 
 ![](<lib/Listado paneles espanol.png>)
 
-Choose the first one "Pitch, Powers, Brake, RPMs, Wind" and you will see that this form changes to the one shown in the following figure:
+Choose the first one, "*Cutin + Cutout + Production: Panel to monitor cutin and cutout operations*" and you will see that this form changes to the one shown in the following figure:
 
 ![](<lib/SR pitch potencias frenos rpms viento 0.png>)
 
-In the first recorder the evolutions of the two signals related to the blade attack angle (pitch) are presented: the command value (Controller.Control.PitchOut, in red) and the real value (Nacelle.DriveTrain.PitchNacelleOut, in green). The possible differences between them have to do with the actuation of the pitch mechanism in the nacelle (characterized by the maximum response speed: see Parameters-> Analog -> NacellePitch:BladeSlewRate) and its state: it may be stuck, or disconnected.
+The first recorder shows the evolution of the two signals related to the blade attack angle (pitch): the command value (Controller.Control.PitchOut, in red) and the real value (Nacelle.DriveTrain.PitchNacelleOut, in green). The differences may be due to the pitch mechanism's actuation in the nacelle (characterized by the maximum response speed: see Parameters-> Analog -> NacellePitch:BladeSlewRate) and its state; it may be stuck or disconnected.
 
-The second recorder presents the electrical power being sent to the grid (*Nacelle.DFIGB2B.GridActivePower* in green) and the mechanical power being extracted from the wind (Nacelle.DriveTrain.ActualWindPowerOut in black).
+The second recorder shows the electrical power sent to the grid (Nacelle.DFIGB2B.GridActivePower in green) and the mechanical power extracted from the wind (Nacelle.DriveTrain.ActualWindPowerOut in black).
 
 The third shows the evolution of the hydraulic brake release mechanism.
 
 The fourth shows the evolution of the Generator shaft rotation speed.
 
-The fifth shows the evolution of the real wind (SynopticWindNacelle.WindSpeedOut in black) and the effective one, taking into account the possible nacelle misorientation (*Controller.Control.EffectiveWind* in blue).
+The fifth shows the evolution of the real wind (SynopticWindNacelle.WindSpeedOut in black) and the effective wind, accounting for possible nacelle misorientation (*Controller.Control.EffectiveWind* in blue).
