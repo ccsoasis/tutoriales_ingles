@@ -1,0 +1,11 @@
+Informe de imagenes - DFIGTutorial (English)
+============================================================
+
+1) Imagenes usadas en los .md que NO estan en lib (0):
+   (ninguna)
+
+2) Imagenes usadas presentes en lib con tamano 0 (0):
+   (ninguna)
+
+3) Imagenes en lib que NO se usan (0):
+   (ninguna)

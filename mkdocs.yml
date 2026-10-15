@@ -1,0 +1,612 @@
+site_name: LdP Tutorials and Simulators
+site_description: Combined cover of tutorials, practical classes and guides for the LdP simulators
+docs_dir: docs
+site_dir: site
+use_directory_urls: false
+theme:
+  name: material
+  custom_dir: overrides
+  language: en
+  font: false
+  palette:
+  - scheme: default
+    primary: blue
+    accent: blue
+    toggle:
+      icon: material/brightness-7
+      name: Switch to dark mode
+  - scheme: slate
+    primary: blue
+    accent: blue
+    toggle:
+      icon: material/brightness-4
+      name: Switch to light mode
+  features:
+  - navigation.tabs
+  - navigation.sections
+  - search.highlight
+  - search.suggest
+extra_css:
+- stylesheets/extra.css
+extra:
+  polyfills:
+  - javascripts/compat.js
+plugins:
+- search
+- offline
+- tags
+markdown_extensions:
+- admonition
+- attr_list
+- md_in_html
+- tables
+- toc:
+    permalink: true
+- pymdownx.highlight
+- pymdownx.superfences
+nav:
+- LdP Tutorials and Simulators: index.md
+- Keyword index: tags.md
+- Two-Speed Active Stall Wind Turbine:
+  - LdP Tutorials and Simulators: DSASTutorial/index.md
+  - Tutorial:
+    - Introduction:
+      - Introduction: DSASTutorial/Introduccion.md
+      - Note about this version: DSASTutorial/Notasobreversion.md
+      - What can you learn with this simulator?: DSASTutorial/Notasobreestaversin.md
+    - What is a wind turbine?:
+      - What is a wind turbine?: DSASTutorial/Queesunaerogenerador.md
+      - Structure of a Horizontal Axis Wind Turbine:
+        - Structure of a Horizontal Axis Wind Turbine: DSASTutorial/EstructuraAerogenerador.md
+        - Blades:
+          - Blades: DSASTutorial/EsquemafuncionaldeunaAerogenerad.md
+          - How the blades are made: DSASTutorial/Palas1.md
+        - Blade angle change mechanism (Pitch):
+          - Blade angle change mechanism (Pitch): DSASTutorial/Palas.md
+          - With hydraulic cylinders:
+            - With hydraulic cylinders: DSASTutorial/Mecanismodecambiodeangulodelasp1.md
+            - Simplified hydraulic scheme: DSASTutorial/Concilindroshidrulicos1.md
+          - With electric motors: DSASTutorial/Concilindroshidrulicos.md
+          - Aerodynamic brakes in fixed-pitch blades: DSASTutorial/Nuevotema1.md
+        - Power Train Brake System:
+          - Power Train Brake System: DSASTutorial/Mecanismodecambiodeangulodelaspa.md
+          - Some industrial brake examples: DSASTutorial/SistemadeFrenos.md
+        - Yaw mechanism:
+          - Yaw mechanism: DSASTutorial/SistemadeFrenos1.md
+          - Some industrial solutions: DSASTutorial/Mecanismodeorientacinyaw.md
+          - Yaw mechanism brakes: DSASTutorial/Nuevotema2.md
+        - Power cables: DSASTutorial/Mecanismodeorientacinyaw2.md
+        - Flexible couplings of the high shaft: DSASTutorial/Mecanismodeorientacinyaw1.md
+        - Gearboxes:
+          - Gearboxes: DSASTutorial/Unionesflexiblesdelejedealta.md
+          - Some industrial examples: DSASTutorial/Multiplicadoras.md
+          - Constructive details: DSASTutorial/Nuevotema6.md
+          - Gearbox lubrication: DSASTutorial/Algunosejemplosindustriales.md
+          - Gearbox inspection: DSASTutorial/Lubricacindelasmultiplicadoras.md
+          - Gearbox replacement: DSASTutorial/Nuevotema3.md
+        - Weather sensors:
+          - Weather sensors: DSASTutorial/SensoresMeteo.md
+          - Of the wind:
+            - Of the wind: DSASTutorial/SensoresViento.md
+            - Anemometers:
+              - Anemometers: DSASTutorial/Anemometrodecazoletas.md
+              - Cup anemometer: DSASTutorial/Delavelocidaddelviento.md
+              - Ultrasonic anemometer: DSASTutorial/Anemometrodecazoletas1.md
+              - Acoustic resonance anemometer: DSASTutorial/Anemmetroporutltrasonidos.md
+              - Lidar (laser and Doppler effect): DSASTutorial/Anemmetroporresonanciaacstica.md
+              - SODAR (sound and Doppler effect): DSASTutorial/LidarlaseryefectoDoppler.md
+            - Wind direction measurement - description of a wind vane: DSASTutorial/MedicindeladireccionDireccionVie.md
+        - Temperature sensors:
+          - Temperature sensors: DSASTutorial/Sensorestemperatura.md
+          - Pt100 sensor measurement circuits: DSASTutorial/Sensoresdetemperatura.md
+        - Controller:
+          - Controller: DSASTutorial/Nuevotema11.md
+          - Types of Controllers used in Wind Turbines: DSASTutorial/Nuevotema12.md
+      - Control Terminal: DSASTutorial/Nuevotema4.md
+      - Functional scheme of a squirrel-cage wind turbine: DSASTutorial/EstructuraoperacionaldeunAerogen.md
+      - Installation of a wind turbine: DSASTutorial/Nuevotema5.md
+      - Electrical Grid connection:
+        - Electrical Grid connection: DSASTutorial/Conexionredelectrica.md
+        - Electrical Grid concepts: DSASTutorial/Nuevotema13.md
+        - Connection implications for the Squirrel Cage Generators: DSASTutorial/Nuevotema14.md
+        - Connection circuit detail:
+          - Connection circuit detail: DSASTutorial/ConexinalaRedElctrica.md
+          - Contactor problem detection logic: DSASTutorial/Detalledelcircuitodeconexin.md
+          - Thyristors: DSASTutorial/Nuevotema.md
+    - Physical principles:
+      - Physical principles: DSASTutorial/PrincipiosFisicosAerogeneradores.md
+      - Operating principle of a wind turbine with squirrel-cage generator directly connected to the grid: DSASTutorial/Porqugiranlaspalas1.md
+      - Why do the blades rotate?: DSASTutorial/PFAPorquegiranlaspalas.md
+      - Concepts about the extractable wind power:
+        - Concepts about the extractable wind power: DSASTutorial/Porqugiranlaspalas.md
+        - Aerodynamic coefficient: DSASTutorial/Conceptossobrelapotencia.md
+        - Control of the power collected from the wind:
+          - Control of the power collected from the wind: DSASTutorial/Coeficienteaerodinmico2.md
+          - By Active Pitch (to-the-feathers): DSASTutorial/Coeficienteaerodinmico.md
+          - By entry into losses (Stalling): DSASTutorial/Stalling.md
+      - Wind Turbine Design and Control Criteria:
+        - Wind Turbine Design and Control Criteria: DSASTutorial/WindTurbineControlcriteria.md
+        - About the wind: DSASTutorial/RequerimientosdelTrendePotencia.md
+        - Power Train requirements: DSASTutorial/RequirementsimposedbytheDriveTra.md
+        - Power curve as a function of the wind: DSASTutorial/Productioncurve.md
+        - Electric Generator:
+          - Physical Description: DSASTutorial/RequirementsimposedbytheElectric.md
+          - Engineering characteristics: DSASTutorial/IntoductiontotheInductionMachine.md
+          - Constructive details of squirrel cage machines: DSASTutorial/Introductiontothephysicalprincip.md
+      - Bibliography: DSASTutorial/Bibliography.md
+    - Active Stall and Two-Speed Wind Turbine Simulator:
+      - Active Stall and Two-Speed Wind Turbine Simulator: DSASTutorial/SimDSAS.md
+      - Main objectives of this simulator: DSASTutorial/SimDSASObjetivos.md
+      - Basic structure of the emulation used in this simulator: DSASTutorial/BasicemulatorsforaWindTurbineinW.md
+      - The Simulator as a Laboratory Workbench:
+        - The Simulator as a Laboratory Workbench: DSASTutorial/TheWorkBenchusedfortheWFS.md
+        - Connection diagram of this Simulator Workbench: DSASTutorial/Electricschematicviewoftheconfig.md
+        - Configuration connection change: DSASTutorial/Indicadoresycomponentesgrficosso.md
+        - Parameter value change: DSASTutorial/Cambiodelasconexionesdelaconfigu.md
+      - Synoptics used in this simulator:
+        - Synoptics used in this simulator: DSASTutorial/Sinopticos.md
+        - Common LdP platform synoptics: DSASTutorial/SinopticosComunes.md
+        - Synoptic Drive Train (SynopticDriveTrain):
+          - Synoptic Drive Train (SynopticDriveTrain): DSASTutorial/SinopticoTrenPotencia.md
+          - Views:
+            - Views: DSASTutorial/VistasTrenPotencia.md
+            - Interior nacelle view: DSASTutorial/VistaInternaGondola.md
+            - 3D view of the wind farm: DSASTutorial/Vista3D.md
+          - Common indicators:
+            - Common indicators: DSASTutorial/IndicadoresGondola.md
+            - Power Train:
+              - Power Train: DSASTutorial/Hub.md
+              - Indicator connections: DSASTutorial/TrendePotencia.md
+            - Temperatures: DSASTutorial/IndicadoresTemperaturas.md
+            - Pitch Control:
+              - Pitch Control: DSASTutorial/Sistemadefrenos3.md
+              - Indicator connections: DSASTutorial/ControldePitch.md
+            - Brake system:
+              - Brake system: DSASTutorial/IndicadoresSistemaFreno.md
+              - Brake control algorithm and signals: DSASTutorial/AlgoritmoFrenos.md
+              - Indicator connections: DSASTutorial/Algoritmodecontroldefrenosyseale.md
+            - Tower vibration sensor simulation: DSASTutorial/Sistemadefrenos2.md
+        - Nacelle Orientation and Wind synoptic (SynopticWindNacelle):
+          - Nacelle Orientation and Wind synoptic (SynopticWindNacelle): DSASTutorial/SinopticoOrientacionViento.md
+          - Wind speed change: DSASTutorial/SinpticodeOrientacindelaGndolaye.md
+          - Wind direction change: DSASTutorial/Cambiodelavelocidaddelviento.md
+          - Indicator connections: DSASTutorial/CambiodelaorientacindelaGndola.md
+        - Electrical Cabinet synoptic:
+          - Electrical Cabinet synoptic: DSASTutorial/SinopticoPanelElectrico.md
+          - Exterior view: DSASTutorial/SinpticodelArmarioElctrico.md
+          - Interior view: DSASTutorial/SinpticodelArmarioElctrico1.md
+          - Electrical Scheme View: DSASTutorial/SinopticoEsquemaElectrico.md
+          - Generation of Network Phase Faults: DSASTutorial/IndicadoresFasesElectricas.md
+        - Control Terminal synoptic:
+          - Control Terminal synoptic: DSASTutorial/SinopticoTerminalControl.md
+          - Start-up button: DSASTutorial/SinpticoTerminalControlSTART.md
+          - Stop button: DSASTutorial/SinpticoTerminalControlSTOP.md
+          - Controller state machine indications: DSASTutorial/SinpticoTerminalControlmaqEstado.md
+        - How to present a given synoptic in the foreground: DSASTutorial/SinpticodelTerminaldeControl.md
+        - How to present a Recorder and choose a predefined Panel in it.:
+          - How to present a Recorder and choose a predefined Panel in it.: DSASTutorial/Comopresentarenprimerplanoundete.md
+          - Panel 'Cutin + Cutout + Production': DSASTutorial/ComopresentarunRegistradoryelegi.md
+          - Panel 'Yawing': DSASTutorial/PanelCutinCutoutProduccion.md
+          - Panel 'Hydraulic brake circuit': DSASTutorial/PanelYawing.md
+          - Panel 'RPMs + Pitch + State Machines': DSASTutorial/PanelCircuitohidrulicodefrenos.md
+          - Panel 'Controller State Machines': DSASTutorial/PanelRPMsPitchMaquinasdeEstado.md
+      - Scope of the Simulation:
+        - Scope of the Simulation: DSASTutorial/Simulacion.md
+        - Processes corresponding to Gondola elements:
+          - Processes corresponding to Gondola elements: DSASTutorial/ProcessesinNacelleEmulator.md
+          - Of the Power Train:
+            - Of the Power Train: DSASTutorial/ParametrosTrenPotencia.md
+            - Hub: DSASTutorial/Hub1.md
+            - Multiplier: DSASTutorial/MultiplicadoraParametros.md
+            - Brake system: DSASTutorial/FrenosParametros.md
+          - Generator: DSASTutorial/GeneradorParametros.md
+          - Yaw system: DSASTutorial/Yawingsubsystem.md
+          - Overspeed safety strategies:
+            - Overspeed safety strategies: DSASTutorial/EstrategiasSeguridadSobrevelocid.md
+            - Overspeed mechanism parameters: DSASTutorial/ParametrosSobrevelocidad.md
+        - Controller:
+          - Controller: DSASTutorial/Controller.md
+          - Types of Controllers:
+            - Types of Controllers: DSASTutorial/Nuevotema8.md
+            - Industrial Computer with Real-Time Operating System: DSASTutorial/Nuevotema9.md
+            - 'PLC: Programmable Logic Controller': DSASTutorial/Nuevotema10.md
+          - Algorithms used:
+            - Algorithms used: DSASTutorial/Algorithms.md
+            - Blade Pitch angle control algorithm: DSASTutorial/Pitchcontolalgorithm.md
+            - Soft starter (soft connection) to the grid: DSASTutorial/Softstarter.md
+            - Yaw and Power Cable unwinding control algorithms:
+              - Yaw and Power Cable unwinding control algorithms: DSASTutorial/Yawingofthenacelle.md
+              - Modes: DSASTutorial/Modes.md
+          - Operating modes:
+            - Operating modes: DSASTutorial/Controlmodes.md
+            - Manual: DSASTutorial/Manual.md
+            - Automatic: DSASTutorial/Automatic.md
+            - Remote control from the SCADA: DSASTutorial/Remotecontrol.md
+          - Controller functional structure:
+            - Controller functional structure: DSASTutorial/ControllersFunctionalstructure.md
+            - Internal control State Machines:
+              - Internal control State Machines: DSASTutorial/StateEventsDiagramsoftheimplemen.md
+              - Operation State Machine:
+                - Operation State Machine: DSASTutorial/OperationStateMachine.md
+                - Legend of the Operation S.M. Diagram: DSASTutorial/LegendforOperationStateMachinedi.md
+              - Safety State Machine:
+                - Safety State Machine: DSASTutorial/SecurityStateMachine.md
+                - Legend of the Security State Machine Diagram: DSASTutorial/LegendoftheSecurityStateMachine.md
+              - Relationships between State Machines: DSASTutorial/RelationshipsamongtheStateMachin.md
+              - Example of State and Event changes in the S.M. during a connection operation (cutin): DSASTutorial/ExamplethechangesinStatesandEven.md
+        - Operator Control Terminal: DSASTutorial/ControlTerminal.md
+    - Technical data of the emulated subsystems:
+      - Technical data of the emulated subsystems: DSASTutorial/DatosTecnicos.md
+      - Characteristics of the Generator emulated in this Simulator:
+        - Characteristics of the Generator emulated in this Simulator: DSASTutorial/DatosTecnicosGenerador.md
+        - Connection of 2 pairs of poles: DSASTutorial/DatosTecnicosGen2polos.md
+        - Connection of 3 pairs of poles: DSASTutorial/DatosTecnicosGen3Polos.md
+      - Functional wind values: DSASTutorial/DatosTecnicosValoresVientos.md
+  - Practical Classes:
+    - Practical classes:
+      - Practical classes: DSASExercises/ClasesPracticas.md
+      - Set the conditions for the Production entry with low wind to occur: DSASExercises/CutinVientoBajo.md
+      - Being in production, wind modification to change the Generator connection from Small to Large: DSASExercises/Cambiode1000a1500.md
+      - Being in production, wind modification to change the Generator connection from Large to Small: DSASExercises/Cambiode1500a1000.md
+      - Observation of the reaction to the "STOP" command: DSASExercises/Cutout.md
+      - Explanation of the conditions that make the blades turn: DSASExercises/PorqueLasPalasGiran.md
+      - Tracking the Controller evolutions (State Machines) in various conditions:
+        - Tracking the Controller evolutions (State Machines) in various conditions: DSASExercises/MaquinasDeEstado.md
+        - In the connection process (Cutin): DSASExercises/MEstadoCutin.md
+        - In the disconnection process (Cutout): DSASExercises/MEstadoCutout.md
+        - During the Generator connection change processes (Small to Large and vice versa): DSASExercises/MEstadoCambio1000a1500.md
+      - Wind direction change effects:
+        - Wind direction change effects: DSASExercises/CambioDireccionViento.md
+        - Manual orientation: DSASExercises/OrientacionManual.md
+        - Automatic orientation: DSASExercises/OrientacionAutomatica.md
+        - Power cable unwinding: DSASExercises/DesenrrolleCables.md
+      - Detailed analysis of the grid connection phases (Cutin): DSASExercises/AnalisisFasesCutin.md
+      - Detailed analysis of the speed change mechanism (change Small Generator to/from Large): DSASExercises/AnalisisCambiosGeneradores.md
+      - Observation of the reaction to a fault in one of the grid phases: DSASExercises/FalloFaseRed.md
+      - Behavior against very strong winds:
+        - Behavior against very strong winds: DSASExercises/ComportamientoVientosFuertes.md
+        - 'Observation of the behavior with very strong winds: several cases': DSASExercises/ObservacionProtocolosVientosFuer.md
+      - Moment of inertia influence on the Power Train rpms evolution: DSASExercises/InfluenciaMomentoInercia.md
+      - Brake hydraulic circuit monitoring:
+        - Brake hydraulic circuit monitoring: DSASExercises/ObservacionCircuitoHidraulico.md
+        - Normal operation observation: DSASExercises/Observaciondeunfalloexcesivodepe.md
+        - Observation of an excessive pressure loss fault in the circuit: DSASExercises/ObservacionPerdidasCircuitoHidra.md
+        - Observation of the effect of a pump with incorrect operation: DSASExercises/ObservacionBombaConFallo.md
+        - Observation of the effect of a discharge valve that does not work: DSASExercises/ObservacionValvualConFallo.md
+      - Observation of the temperature detectors: DSASExercises/Monitorizaciondelcircuitohidruli.md
+- Wind Turbine with Doubly-Fed Generator:
+  - LdP Tutorials and Simulators: DFIGTutorial/index.md
+  - Tutorial:
+    - Introduction:
+      - Introduction: DFIGTutorial/Introduccion.md
+      - About this document: DFIGTutorial/Acercadeestedocumento.md
+      - Basic concepts of wind turbines: DFIGTutorial/ConceptosbasicosdeAerogeneradore.md
+      - Main components of an aerogenator: DFIGTutorial/Principalescomponentesdeunaeroge.md
+      - Relationship between wind turbines and their location: DFIGTutorial/Relacionentrelosaerogeneradoresy.md
+      - Reasons for the use of Variable Speed Wind Turbines: DFIGTutorial/PorqueAerogenVeloVariable.md
+      - Implications of the desired behavior:
+        - Implications of the desired behavior: DFIGTutorial/Implicacionesdelcomportamientode.md
+        - Implications for the Power Train: DFIGTutorial/ImplicacionesparaelTrendePotenci.md
+        - Implications for the Electrical Converter: DFIGTutorial/ImplicacionesVeloVariableConvert.md
+        - Description of the Cp function (aerodynamic coefficient): DFIGTutorial/DescripcindelafuncinCpcoeficient.md
+        - Maximum Power Point Tracking algorithm (Maximum Power Point Tracking): DFIGTutorial/AlgoritmodeSeguimientodelPuntode.md
+      - Subsystems and signals of a DFIG wind turbine: DFIGTutorial/SubsistemasysenalesAerogenDFIG.md
+    - Supplementary information:
+      - Supplementary information: DFIGTutorial/Informacincomplementaria.md
+      - About the wind:
+        - About the wind: DFIGTutorial/Sobreelviento.md
+        - Wind measurement - description of an anemometer.: DFIGTutorial/MedicionVientoAnemometro.md
+        - Wind direction measurement - description of a wind vane: DFIGTutorial/MedicindeladireccionDireccionVie.md
+      - Why do the blades rotate?: DFIGTutorial/Porqugiranlaspalas.md
+      - Constructive views of electrical induction machines: DFIGTutorial/Vistasconstructivasdemaquinaselc.md
+      - Description of the Back-to-Back Converters:
+        - Description of the Back-to-Back Converters: DFIGTutorial/ConvertidoresBackToBack.md
+        - Basic structure of the Back-to-Back Converters: DFIGTutorial/ConvertidoresBackToBackEstructur.md
+        - Operating modes: DFIGTutorial/ConvertidoresBackToBackModosFunc.md
+        - Operating principles:
+          - Operating principles: DFIGTutorial/ConvertidoresBackToBackPrincipio.md
+          - IGBTs: DFIGTutorial/IGBTs.md
+        - Grid requirements: DFIGTutorial/ConvertidoresBackToBackRequerimi.md
+      - Grid fault tolerance capabilities (Voltage-Fault-drive-through):
+        - Grid fault tolerance capabilities (Voltage-Fault-drive-through): DFIGTutorial/RedElectricaExigencias.md
+        - Working area Power vs Frequency of the Grid: DFIGTutorial/RedElectricaExigenciasAreaFuncio.md
+        - Grid codes: DFIGTutorial/RedElectricaExigenciasGridCodes.md
+        - 'Auxiliary circuits for the control of the response to Grid Codes: Crowbars': DFIGTutorial/ConvertidoresCrobars.md
+      - Power Quality: DFIGTutorial/CalidadSuminisElectricoPowerQual.md
+      - Lamp angle change mechanisms: DFIGTutorial/Mecanismosdecambiodelangulodelas.md
+    - Description of the DFIG Wind Turbine Simulator:
+      - Description of the DFIG Wind Turbine Simulator: DFIGTutorial/DescripcindelSimuladordelAerogen.md
+      - Synoptics:
+        - Synoptics: DFIGTutorial/DFIGWTSinopticos.md
+        - Control Terminal:
+          - Control Terminal: DFIGTutorial/TerminaldeControl.md
+          - Power Train operational curves:
+            - Power Train operational curves: DFIGTutorial/DFIGWTTCCurvasOperacionales.md
+            - pu expressions (per unit): DFIGTutorial/Expresionespuperunit.md
+            - Mechanical and electrical powers vs Rotor speed: DFIGTutorial/DFIGWTTCPanelPotenciaVSrpms.md
+            - Power Train speed vs Wind: DFIGTutorial/DFIGWTTCVeloTrenPotenciavsViento.md
+            - Power and Pitch vs Wind: DFIGTutorial/DFIGWTTCPotenciaPitchvsViento.md
+            - 'Aerodynamic coefficient: Cp function': DFIGTutorial/CoeficienteaerodinmicofuncinCp.md
+        - DFIG Generator:
+          - DFIG Generator: DFIGTutorial/GeneradorDFIG.md
+          - Details of the representation of magnetic flows in the Generator: DFIGTutorial/Detalledelarepresentaciondeflujo.md
+        - Views of the nacelle:
+          - Views of the nacelle: DFIGTutorial/DFIGWTGondola.md
+          - 3D view of the wind turbine in the Wind Park: DFIGTutorial/DFIGWTGondolaVista3D.md
+          - Internal view of the nacelle: DFIGTutorial/DFIGWTGondolaVistaInterna.md
+          - Brake mechanism: DFIGTutorial/DFIGWTGondolaFrenos.md
+          - Pitch control: DFIGTutorial/ControldelPitch.md
+          - Speed indicators in the Power Train: DFIGTutorial/DFIGWTGondolaIndicadoresRPMs.md
+          - Vibrations in the Tower: DFIGTutorial/DFIGWTSensorVibracionesTorre.md
+        - Electrical cabinet: DFIGTutorial/DFIGArmarioElectrico.md
+        - Wind specification and top view of the nacelle:
+          - Wind specification and top view of the nacelle: DFIGTutorial/Especificacindelvientoyvistaceni.md
+          - Wind gusts (Wind gusts):
+            - Wind gusts (Wind gusts): DFIGTutorial/RfagasdevientoWindgusts.md
+            - Examples: DFIGTutorial/SinopticoVientoGondRafagasEjempl.md
+            - Wind profile creation: DFIGTutorial/Creacindeperfilesdeviento.md
+          - About specific wind values: DFIGTutorial/Sobrevaloresespecficosdevientos.md
+        - Predefined panels for the Recorders:
+          - Predefined panels for the Recorders: DFIGTutorial/PanelespredefinidosparalosRegist.md
+          - Pitch, Powers, Brake, RPMs, Wind:
+            - Pitch, Powers, Brake, RPMs, Wind: DFIGTutorial/PitchPotenciasFrenoRPMsViento.md
+            - Cutin: DFIGTutorial/Panel1Cutin.md
+            - Cutout: DFIGTutorial/Panel1Cutout.md
+          - Powers, Rotary Current, Phase Angles:
+            - Powers, Rotary Current, Phase Angles: DFIGTutorial/Panel2.md
+            - Cutin: DFIGTutorial/Panel2Cutin.md
+            - Cutout: DFIGTutorial/Panel2Cutout.md
+          - Powers, Rotor and Stator Currents, Phase Angles, Rotor Voltage, Rotor Frequency, RPMs, Wind:
+            - Powers, Rotor and Stator Currents, Phase Angles, Rotor Voltage, Rotor Frequency, RPMs, Wind: DFIGTutorial/Panel3.md
+            - Cutin: DFIGTutorial/Panel3Cutin.md
+            - Cutout: DFIGTutorial/Panel3Cutout.md
+          - Pitch, Cp, Powers, delta wind, RPMs, RPMs detail, Wind, Brakes:
+            - Pitch, Cp, Powers, delta wind, RPMs, RPMs detail, Wind, Brakes: DFIGTutorial/Panel4.md
+            - Cutin: DFIGTutorial/Panel4Cutin.md
+            - Cutout: DFIGTutorial/Panel4Cutout.md
+          - Guidance: DFIGTutorial/PanelOrientacion.md
+          - Hydraulic brake circuit: DFIGTutorial/PanelCircuitoHidraulico.md
+          - RPMs, Pitch and Controller State Machines:
+            - RPMs, Pitch and Controller State Machines: DFIGTutorial/PanelRPMsControlador.md
+            - Cutin: DFIGTutorial/PanelRPMsControllerCutin.md
+            - Cutout: DFIGTutorial/PanelRPMsControllerCutout.md
+          - Controller State Machines:
+            - Controller State Machines: DFIGTutorial/PanelMaqEstControlador.md
+            - Cutin: DFIGTutorial/PanelMaqEstControladorCutin.md
+            - Cutout: DFIGTutorial/PanelMaqEstControladorCutout.md
+      - List of Incidence messages: DFIGTutorial/ListadodemensajesdeIncidencias.md
+    - Reference list: DFIGTutorial/Listadereferencias.md
+  - Practical Classes:
+    - Practical classes:
+      - Practical classes: DFIGExercises/Clasesprcticas.md
+      - Wind turbine start-up (cutin) with wind below the nominal:
+        - Wind turbine start-up (cutin) with wind below the nominal: DFIGExercises/CPArranqueconvientosbajos.md
+        - With wind below the one necessary for operation at the Generator synchronism speed:
+          - With wind below the one necessary for operation at the Generator synchronism speed: DFIGExercises/CPArranqueVientoMenorSincronismo.md
+          - Evolution in the Power vs rpms plane: DFIGExercises/CPArranqueVientoMenorSincPotRPMs.md
+          - Evolution of key variables: DFIGExercises/CPArranqueVientoMenorSincVarClav.md
+          - Explanation of the signal evolution: DFIGExercises/CPArranqueVientoMenorSincExplica.md
+          - Evolution of the Magnetic Fluxes in the Generator and of the B2B signals: DFIGExercises/CPArranqueVientoMenorSincFlujos.md
+        - With wind below the nominal but above the synchronism one: DFIGExercises/CPArranqueVientoEntreSincyNomina.md
+      - Stop with wind below the Nominal: DFIGExercises/CPParoVientoMenorNominal.md
+      - Wind gusts with low winds:
+        - Wind gusts with low winds: DFIGExercises/Rfagasdevientoconvientosbajos.md
+        - With slow changes: DFIGExercises/CPRafagasVientoBajoCambioLento.md
+        - With rapid changes: DFIGExercises/CPRafagasVientoBajoCambioRapido.md
+      - Wind turbine start-up (cutin) with wind above the Nominal: DFIGExercises/CPArranqueientSupNominal.md
+      - Stop with wind above the Nominal: DFIGExercises/CPVientoSupNominal.md
+      - Wind gusts with high winds:
+        - Wind gusts with high winds: DFIGExercises/CPRafagasVientoAlto.md
+        - With winds in the upper part of the range: DFIGExercises/CPRafagasVientoAltoSuperior.md
+      - Desired Active and Reactive Power changes: DFIGExercises/CPCambioPotenciasActivaReactiva.md
+      - Monitoring of the Generator and Back-to-Back Converters variables:
+        - Monitoring of the Generator and Back-to-Back Converters variables: DFIGExercises/MonitorizacindelasvariablesdelGe.md
+        - Evolution of key variables with the wind: DFIGExercises/CPGeneradorB2BEvolVarClave.md
+        - Influence of the Reactive Power on the Generator: DFIGExercises/CPGeneradorB2BInfluenciaActivaRe.md
+      - Influence of the air density: DFIGExercises/CPInfluenciaDensidadAire.md
+      - Influence of the Power Train Moment of Inertia: DFIGExercises/CPInfluenciaMomentoInercia.md
+      - Evolution against long voltage drops: DFIGExercises/CPCaidasTensionLargas.md
+    - Tests:
+      - Tests: DFIGExercises/Tests.md
+      - Answers to the tests: DFIGExercises/Respuestasalostests.md
+- Rotor Resistance Control Wind Turbine:
+  - LdP Tutorials and Simulators: RRCTutorial/index.md
+  - Tutorial:
+    - Introduction:
+      - Introduction: RRCTutorial/Introduccion.md
+      - Reasons for the development of Wind Turbines with Rotor Resistance control:
+        - Reasons for the development of Wind Turbines with Rotor Resistance control: RRCTutorial/RazonesparaeldesarrollodelosAero.md
+        - Blade aerodynamic coefficient: RRCTutorial/Coeficienteaerodinmicodelaspalas.md
+      - Other characteristics of these wind turbines: RRCTutorial/Otrascaractersticasdeestosaeroge.md
+    - Induction generators with variable Rotor Resistance:
+      - Induction generators with variable Rotor Resistance: RRCTutorial/GeneradoresdeinduccinconResisten.md
+      - Other features of the Generator with Variable Resistance: RRCTutorial/OtrascaracteristicasdelGenerador.md
+    - Rotor Resistance control algorithm: RRCTutorial/AlgoritmodecontroldelaResistenci.md
+    - Control electronic circuit:
+      - Control electronic circuit: RRCTutorial/Circuitoelectrnicodelcontrol.md
+      - Most significant signal graphs: RRCTutorial/Grficosdelassealesmssignificativ.md
+      - IGBTs: RRCTutorial/IGBTs.md
+    - RRCWT Simulator Components:
+      - RRCWT Simulator Components: RRCTutorial/ComponentesdelSimuladorRRCWT.md
+      - Synoptics:
+        - Synoptics: RRCTutorial/Sinpticos.md
+        - Control Terminal:
+          - Control Terminal: RRCTutorial/ControlTerminal.md
+          - Power vs Rotor Slip: RRCTutorial/PotenciavsDeslizamientodelRotor.md
+        - Electrical panel:
+          - Electrical panel: RRCTutorial/Panelelctrico.md
+          - Electrical scheme: RRCTutorial/Esquemaelctrico.md
+        - SynopticWindNacelle:
+          - SynopticWindNacelle: RRCTutorial/SynopticWindNacelle.md
+          - Menu options:
+            - Menu options: RRCTutorial/Opcionesdemenu.md
+            - View: RRCTutorial/Vista.md
+            - Wind gusts:
+              - Wind gusts: RRCTutorial/Rfagasdeviento.md
+              - How to define gusts: RRCTutorial/Cmodefinirrfagas.md
+        - SynopticDriveTrain: RRCTutorial/SynopticDriveTrain.md
+  - Practical Classes:
+    - Practical classes:
+      - Practical classes: RRCExercises/Clasesprcticas.md
+      - Grid connection sequence (cutin) with wind below the nominal: RRCExercises/SecuenciadeconexinalaRedcutincon.md
+      - Gusts with wind below the nominal:
+        - Gusts with wind below the nominal: RRCExercises/Rfagasconvientoinferioralnominal.md
+        - Small wind gust: RRCExercises/Rfagadevientopequea.md
+        - Large wind gust: RRCExercises/Rfagadevientogrande.md
+      - Grid connection sequence (cutin) with wind above the nominal: RRCExercises/SecuenciadeconexinaRedcutinconvi.md
+      - Wind gusts with starting wind above the nominal: RRCExercises/Rfagasdevientoconvientodepartida.md
+      - rpms control mechanism observation: RRCExercises/Observacindelmecanismodecontrold.md
+      - Pitch mechanism change capacity influence: RRCExercises/Influenciadelacapacidaddecambiod.md
+      - Desired Active Power change: RRCExercises/CambiodelaPotenciaActivadeseada.md
+- Wind Farm SCADA Simulator:
+  - LdP Tutorials and Simulators: WFSSCADA/index.md
+  - Introduction:
+    - Introduction: WFSSCADA/Introduccion.md
+    - Note on this version: WFSSCADA/Noticeonthisversion.md
+    - What is a Wind Farm?:
+      - What is a Wind Farm?: WFSSCADA/WhatisaWindFarm.md
+      - Integration of a Wind Farm in the Electrical Grid: WFSSCADA/IntegrationofaWindFarmintheGrid.md
+      - Simplified schematic of the Transmission and Distribution Grids: WFSSCADA/IntegracindeunParqueElicoenlaRed.md
+      - The Control Room - SCADA: WFSSCADA/TheControlRoom.md
+      - Control of a Wind Turbine: WFSSCADA/ImportantcharacteristicsofWindT1.md
+      - Structure and Functionalities of a Wind Farm:
+        - Structure and Functionalities of a Wind Farm: WFSSCADA/StrucutureandFunctionalitiesofaW.md
+        - Territorial deployment of a Wind Farm: WFSSCADA/Landlayout.md
+        - Unifilar electrical schematic:
+          - Unifilar electrical schematic: WFSSCADA/UnifilarschematicoftheSubstation.md
+          - Legend of the symbols in the unifilar schematic: WFSSCADA/Legendofsymbols.md
+        - Meteorological instruments:
+          - Meteorological instruments: WFSSCADA/Meteorologicalinstruments.md
+          - 'Wind measurement: anemometer': WFSSCADA/Windspeedanemometer.md
+          - 'Wind direction: wind vane': WFSSCADA/Winddirectionwindvane.md
+          - Ambient temperature: WFSSCADA/Ambienttemperature.md
+        - About the generated power control: WFSSCADA/Controlofthegeneratedpower.md
+        - Delivered Active Power control: WFSSCADA/IntegracionconlaRedElectrica.md
+        - '"Grid codes"': WFSSCADA/Gridcodes.md
+    - What is a wind turbine?:
+      - What is a wind turbine?: WFSSCADA/WhatisaWindTurbine.md
+      - Wind turbine power curves: WFSSCADA/Curvasdepotenciaaerog.md
+      - Operation modes: WFSSCADA/ControlofaWindTurbine.md
+      - Operational structure: WFSSCADA/StructureofaWindTurbine.md
+      - Grid connection: WFSSCADA/Electricalconnectiontothegrid.md
+  - Wind Farm Simulator Description:
+    - Wind Farm Simulator Description: WFSSCADA/StructureoftheWindFarmSimulator.md
+    - Simulator Components:
+      - Simulator Components: WFSSCADA/Description.md
+      - Execution control and option access:
+        - Execution control and option access: WFSSCADA/ComponentesdelSimulador.md
+        - Parameters: WFSSCADA/Parameters.md
+        - Signal evolution graphs:
+          - Signal evolution graphs: WFSSCADA/PowerpergroupTotalproducedPowera.md
+          - Obtaining active copies: WFSSCADA/Grficosdeevolucindeseales.md
+      - Main synoptic:
+        - Main synoptic: WFSSCADA/DescriptionoftheUserInterface.md
+        - Wind turbine connections to the PCC: WFSSCADA/IconicviewoftheWTsPCCandpowercab.md
+        - SCADA application view: WFSSCADA/SCADAview.md
+        - Wind turbine state management: WFSSCADA/Maintenanceview.md
+        - Grid Demand: WFSSCADA/Externaldemandsetpoint.md
+        - Production Indication: WFSSCADA/Productionindication.md
+        - Automatic management: WFSSCADA/AutomaticDispatching.md
+        - Meteorological station: WFSSCADA/Meteorologicalstation.md
+      - 3D View: WFSSCADA/3DView.md
+  - Operations in a Wind Farm:
+    - Operations in a Wind Farm: WFSSCADA/OperationsinaWindFarm.md
+    - Production Control: WFSSCADA/Productioncontrol.md
+    - Maintenance Management:
+      - Maintenance Management: WFSSCADA/ControldelaProduccin.md
+      - Planned Maintenance: WFSSCADA/Mantenimiento.md
+      - Corrective Maintenance: WFSSCADA/MantenimientoPlanificado.md
+      - Predictive Maintenance: WFSSCADA/MantenimientoCorrectivo.md
+  - Practical classes:
+    - Practical classes: WFSSCADA/Teachingsessions.md
+    - 3D view presentation: WFSSCADA/Cambiodelestadodeunaerogenerador.md
+    - Wind turbine state change: WFSSCADA/Clasesprcticas1.md
+    - Manual production control: WFSSCADA/Influenciadelascondicionesambie1.md
+    - Automatic production control: WFSSCADA/Controlmanualdelaproduccin.md
+    - Environmental conditions influence on the Farm Production: WFSSCADA/Influenceofweatherconditionsonth.md
+    - Demand Change: WFSSCADA/Influenciadelascondicionesambien.md
+    - Simulation of putting a Wind Turbine "Not available": WFSSCADA/SimulationthataWTisOutofOrder.md
+    - Visualization of the temporal evolution of the signals in the SCADA: WFSSCADA/SimulacindePuestaenNodisponibled.md
+  - Data recording: WFSSCADA/Datalogging1.md
+- LdP - Help:
+  - LdP Tutorials and Simulators: LdP_Help/index.md
+  - Introduction:
+    - Introduction: LdP_Help/Introduccion.md
+    - About this version: LdP_Help/Sobreestaversion.md
+  - Structure of LdP applications:
+    - Structure of LdP applications: LdP_Help/EstructuraAplicLdP.md
+    - Basic concepts:
+      - Basic concepts: LdP_Help/EstructuraAplicLdPConceptosBasic.md
+      - Basic components: LdP_Help/EstructuraAplicLdPComponentes.md
+      - Simulation Control:
+        - Simulation Control: LdP_Help/EstructuraAplicLdPControlSimulac.md
+        - Execution Control Synoptic:
+          - Execution Control Synoptic: LdP_Help/EstructuraAplicLdPSinopticoEjecu.md
+          - Parameter Overview: LdP_Help/EstructuraAplicLdPParametros.md
+          - Synoptic for editing Signals and Connections:
+            - Synoptic for editing Signals and Connections: LdP_Help/EstructuraAplicLdPSinopticoSenCo.md
+            - Editing Connections: LdP_Help/EstructuraAplicLdPEdicionConex.md
+          - Synoptic Recorder:
+            - Synoptic Recorder: LdP_Help/EstructuraAplicLdPRegistrador.md
+            - Active copies of the Recorder: LdP_Help/DefinicindeRegistradores.md
+            - Definition of Recorders: LdP_Help/EstructuraLdPDefRegistradores.md
+      - The LdP as a workbench:
+        - The LdP as a workbench: LdP_Help/EstructuraAplicLdPBancoTrabajo.md
+        - Properties of specific LdP indicators: LdP_Help/EstructuraAplicLdPIndicadores.md
+        - Creation of abnormal operating conditions: LdP_Help/EstructuraAplicLdPCondFallo.md
+    - Signal value logging (datalogging):
+      - Signal value logging (datalogging): LdP_Help/EstructuraAplicLdPDatalogging.md
+      - Structure of the registration databases: LdP_Help/EstructuraAplicLdPDatalogEstruct.md
+      - Display of recorded values: LdP_Help/EstructuraAplicLdPDatalogVisuali.md
+      - Exporting data to Excel: LdP_Help/EstructuraAplicLdPDataloAExcel.md
+  - Version and license information: LdP_Help/InformacionVersionylicencia.md
+- Wind Turbine Experiments:
+  - LdP Tutorials and Simulators: Experiments/index.md
+  - Introduction: Experiments/Introduction.md
+  - Why do the blades of a wind turbine turn?: Experiments/WhythebladesinaWindTurbineturn.md
+  - Comparison of the start-up (cut-in) in different wind turbine families: Experiments/ComparisonofcutinindifferentWind.md
+  - Comparison of Power vs Wind Speed curves: Experiments/ComparisonofPowervsWindcurvesofW.md
+  - Observation of the nacelle orientation operations: Experiments/ObservationoftheNacelleYawoperat.md
+  - Cost of power cable unwinding: Experiments/CostofPowerCablesuntwisting.md
+  - Response to wind gusts: Experiments/Responsetowindgusts.md
+  - Differences in the electrical generators used in wind turbines: Experiments/DifferencesintheElectricGenerato.md
+- WFS SCADA Wind Farm Simulator Guide:
+  - LdP Tutorials and Simulators: GuiaParqueEolico/index.md
+  - Guide of the SCADA Control Center Options: GuiaParqueEolico/inicio.md
+  - Control Center Simulator of a Wind Farm:
+    - Control Center Simulator of a Wind Farm: GuiaParqueEolico/simulador_del_centro_de_control_de_un_parque_elico.md
+    - Wind Farm Simulator start-up: GuiaParqueEolico/puesta_en_marcha_del_simulador_de_parque_elico.md
+    - Simulator Description:
+      - Simulator Description: GuiaParqueEolico/descripcin_del_simulador.md
+      - Program Start-up: GuiaParqueEolico/puesta_en_marcha_del_programa.md
+      - Simulation Execution: GuiaParqueEolico/ejecucin_de_la_simulacin.md
+      - Simulator Elements:
+        - Simulator Elements: GuiaParqueEolico/elementos_del_simulador.md
+        - About the Meteorological Station: GuiaParqueEolico/sobre_la_estacin_meteorologica.md
+        - Production Management: GuiaParqueEolico/gestin_de_la_produccin.md
+        - Production Evolution of each Wind Turbine over time: GuiaParqueEolico/evolucin_de_la_produccin_de_cada_aerogenerador_en_el_tiempo.md
+    - Exercises:
+      - Exercises: GuiaParqueEolico/ejercicios.md
+      - Farm 3D View in the Simulator: GuiaParqueEolico/vista_3d_del_parque_en_el_simulador.md
+      - Wind speed change tracking: GuiaParqueEolico/seguimiento_del_cambio_de_la_velocidad_del_viento.md
+      - Environmental conditions influence on Production: GuiaParqueEolico/influencia_de_las_condiciones_ambientales_en_la_produccin.md
+      - Demand Change Influences: GuiaParqueEolico/influencias_del_cambio_de_la_demanda.md
+      - About the unavailable wind turbines:
+        - About the unavailable wind turbines: GuiaParqueEolico/sobre_los_aerogeneradores_no_disponibles.md
+        - SCADA indication that a wind turbine is not available: GuiaParqueEolico/indicacin_en_el_scada_que_un_aerogenerador_no_est_disponible.md
+        - How it is simulated that a wind turbine is not available: GuiaParqueEolico/como_se_simula_que_un_aerogenerador_no_est_disponible.md
+      - About the SCADA communications with the wind turbines: GuiaParqueEolico/sobre_las_comunicaciones_del_scada_con_los_aerogeneradores.md
+      - Wind Farm data recording: GuiaParqueEolico/registro_de_datos_del_parque_eolico.md
+  - Interesting videos:
+    - Interesting videos: GuiaParqueEolico/videos_interesantes.md
+    - Documentary - Wind farm construction: GuiaParqueEolico/documental__construccion_de_un_parque_elico.md
+    - Guided visit to the interior of a wind turbine: GuiaParqueEolico/visita_guiada_al_interior_de_un_aerogenerador.md
+    - Transparent wind turbine view: GuiaParqueEolico/vista_transparente_de_aerogenerador.md
+    - Start-up and Stop operations of a Wind Turbine: GuiaParqueEolico/operaciones_de_puesta_en_marcha_y_parada_de_un_aerogenerador.md
+    - Description of electrical Substation elements: GuiaParqueEolico/descripcin_de_elementos_de_una_subestacin_elctrica.md
+    - Wind turbine foundation example: GuiaParqueEolico/ejemplo_de_cimentacin_de_aerogenerador.md
+    - Orientation System elements (Yaw system): GuiaParqueEolico/elementos_del_sistema_de_orientacin_yaw_system.md
+    - Wind Turbine Wake Influence: GuiaParqueEolico/influencia_de_las_estelas_de_los_aerogeneradores.md
+    - Influence of the blade attack angle change control mechanism of a wind turbine: GuiaParqueEolico/influencia_del_mecanismo_de_control_del_angulo_de_ataque_de_las_palas_de_un_aerogenerador.md
+    - Explanation of the operation of a gearbox with planetary stage: GuiaParqueEolico/explicacin_del_funcionamiento_de_una_multiplicadora_con_etapa_planetaria.md
+    - Wind turbine blade manufacturing: GuiaParqueEolico/fabricacin_de_palas_de_aerogeneradores.md

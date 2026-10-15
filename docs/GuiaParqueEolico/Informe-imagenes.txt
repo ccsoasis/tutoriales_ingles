@@ -1,0 +1,25 @@
+Informe de imagenes - GuiaParqueEolico (English)
+============================================================
+
+1) Imagenes usadas en los .md que NO estan en lib (15):
+   [fuera de lib] CheckBoxChecked_SUAVE.png
+   [fuera de lib] ExplicacionPlanetario.jpg
+   [fuera de lib] FabricacionPalaLM.jpg
+   [fuera de lib] Forward.png
+   [fuera de lib] InstalacionAerogenerador--1.jpg
+   [fuera de lib] SimulacionParqueconEstelas.jpg
+   [fuera de lib] Substacion.jpg
+   [fuera de lib] Torre_meteorologica_300x450.jpg
+   [fuera de lib] VisitaGuiada-ingles.jpg
+   [fuera de lib] Vista3DdeAeroTransparente.jpg
+   [fuera de lib] WindTech-YawSystem.jpg
+   [fuera de lib] img0.png
+   [fuera de lib] influenciaPitchSlewRate.jpg
+   [fuera de lib] paro.png
+   [fuera de lib] theMakingOfWindTurbine.jpg
+
+2) Imagenes usadas presentes en lib con tamano 0 (0):
+   (ninguna)
+
+3) Imagenes en lib que NO se usan (0):
+   (ninguna)

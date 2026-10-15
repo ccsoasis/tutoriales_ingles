@@ -1,0 +1,22 @@
+{
+  "device_id": "f5176b41-5f46-45d4-a789-ef8d09cb3987",
+  "device_label": "Windows",
+  "saved_at": 1791968859,
+  "active_index": 1,
+  "tabs": [
+    {
+      "file_path": null,
+      "file_name": "Untitled.md",
+      "cursor_line": 1,
+      "cursor_col": 3,
+      "rel_path": null
+    },
+    {
+      "file_path": "C:\\Users\\ccsoa\\OneDrive\\Documentos\\Tutoriales\\English\\docs\\DFIGExercises\\Clasesprcticas.md",
+      "file_name": "Clasesprcticas.md",
+      "cursor_line": null,
+      "cursor_col": null,
+      "rel_path": "Clasesprcticas.md"
+    }
+  ]
+}

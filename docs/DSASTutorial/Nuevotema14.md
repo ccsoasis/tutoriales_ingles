@@ -1,0 +1,3 @@
+# Connection implications for the Squirrel Cage Generators
+
+Due to the squirrel cage generator characteristics, explained in...

@@ -1,0 +1,55 @@
+:root {
+  --md-text-font: "Segoe UI", Calibri, Arial, sans-serif;
+  --md-code-font: "Consolas", "Courier New", monospace;
+}
+
+/* Material renders admonitions (tip/warning/info/example) at 0.64rem (12.8px);
+   match them to the body text (0.8rem = 16px). */
+.md-typeset .admonition,
+.md-typeset details {
+  font-size: 0.8rem;
+}
+
+/* Keyword ("tags") disclosure: collapsed behind a button instead of always
+   showing every chip inline, so long keyword lists don't push the title down. */
+.md-tags-toggle {
+  margin: 0 0 1em;
+}
+
+.md-tags-toggle__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  cursor: pointer;
+  list-style: none;
+  -webkit-user-select: none;
+  user-select: none;
+  padding: 0.3em 0.9em;
+  border-radius: 1.2em;
+  background-color: var(--md-default-fg-color--lightest);
+  color: var(--md-default-fg-color--light);
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.md-tags-toggle__button::-webkit-details-marker,
+.md-tags-toggle__button::marker {
+  display: none;
+  content: "";
+}
+
+.md-tags-toggle__button::before {
+  content: "\1F3F7\FE0F";
+}
+
+.md-tags-toggle__button::after {
+  content: "\25B8";
+}
+
+.md-tags-toggle[open] > .md-tags-toggle__button::after {
+  content: "\25BE";
+}
+
+.md-tags-toggle .md-tags {
+  margin-top: 0.6em;
+}
