@@ -5,7 +5,7 @@
     ***What to observe:*** The trajectory of the Mechanical Power indicator (cross) and Electrical Power (circle) until both coincide on the Operational Curve.
     💡 Compare the small difference between mechanical and electrical power: what is it due to?
 
-!!! warning "❓ Guiding questions"
+!!! Warning: "❓ Guiding questions"
     1. On which line of the operational curve does the operating point stabilize? Does it coincide with the Maximum Power line (blue)?
     2. What is the difference between the wind Mechanical Power and the Electrical Power sent to the grid? Where is that energy lost?
     3. What value does the Cp have at the stable point? Is it its maximum? Check it in the "Cp vs TSR and Pitch" panel.
@@ -16,13 +16,13 @@
 
 - Set the wind below 7.8 m/s, for example, at 7 m/s.
 
-- Check that there are no "Incidents" to acknowledge other than "Manual STOP". Otherwise acknowledge them. Then press START in the Control Terminal.
+- Check that there are no "Incidents" to acknowledge other than "Manual STOP". Otherwise, acknowledge them. Then press START in the Control Terminal.
 
 - Make the "Operational Curves" synoptic visible (In "Control Terminal ..." press "*Work Curves*").
 
-- Observe the evolution of the Wind Mechanical Power indicators (cross) and of the Electrical Power sent to the grid (circle), in the Power vs rpms panel (upper left). Also follow the evolution of the Cp value as a function of the TSR and the pitch (lower left panel).
+- Observe the evolution of the Wind Mechanical Power indicators (cross) and of the Electrical Power sent to the grid (circle), in the Power vs rpms panel (upper left). Also follow the evolution of the Cp value as a function of TSR and pitch (lower-left panel).
 
-- Wait for these two indicators to stabilize: you will see that then both practically coincide.
+- Wait for these two indicators to stabilize; you will see that they then practically coincide.
 
 - You will obtain a graph similar to the following.
 
